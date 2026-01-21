@@ -1,13 +1,7 @@
 {
-  "name": "comment",
-  "github": {
-    "silent": true
-  },
+  "buildCommand": "npm install",
+  "installCommand": "npm install",
   "builds": [
-    {
-      "src": "robots.txt",
-      "use": "@vercel/static"
-    },
     {
       "src": "index.cjs",
       "use": "@vercel/node"
@@ -15,7 +9,7 @@
   ],
   "rewrites": [
     {
-      "source": "/((?!robots\\.txt$).*)",
+      "source": "/(.*)",
       "destination": "index.cjs"
     }
   ]
